@@ -57,7 +57,9 @@ for ep in range(1, 101):
 # ------------------------------------------------------------------
 # Results
 # ------------------------------------------------------------------
-avg_cost = -np.mean(rewards)
+costs = [-r for r in rewards]
+
+avg_cost = np.mean(costs)
 
 print("\n" + "="*60)
 print("FINAL EVALUATION RESULTS (100 episodes)")

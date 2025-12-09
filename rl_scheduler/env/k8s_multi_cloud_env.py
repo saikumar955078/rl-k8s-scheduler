@@ -119,7 +119,7 @@ class K8sMultiCloudEnv(gym.Env):
 
         cost = row['cost_aws'] if action == 0 else row['cost_azure']
         latency = row['latency_aws'] if action == 0 else row['latency_azure']
-        reward = -100 * (0.6 * cost + 0.4 * latency)
+        reward = 100 * (0.6 * cost + 0.4 * latency)
 
         # Optional real pod dry-run (only in slow mode)
         if not self.fast_mode:
